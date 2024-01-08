@@ -11,9 +11,9 @@ const alanKey = '037db8c6442ad9b12644fa81a388e2302e956eca572e1d8b807a3e2338fdd0d
             // / Initialize Alan voice assistant button with the provided key
             key:alanKey,
             //Import command based on certain actions and commands
-            onCommand: ( { command }) => {
-                if(command === 'testCommand') {
-                    alert ('This code was executed');
+            onCommand: ( { command, articles }) => {
+                if(command === 'newHeadlines') {
+                    console.log(articles);
                 }
             }
         })
